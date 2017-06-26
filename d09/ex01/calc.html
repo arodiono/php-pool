@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <style>
+        html {
+	        box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            background-color: #fafafa;
+        }
+        input, select {
+            padding: 0 10px;
+            height: 30px;
+            width: 100px;
+            border: 1px solid rgb(166, 166, 166);
+            background-color: rgb(248, 248, 248);
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        select {
+            width: 40px;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 430px;
+            margin: auto;
+        }
+        .calc {
+            margin-top: 50%;
+            width: 100%;
+        }
+        .btn {
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #0099ff;
+            color: #fff;
+            border: none;
+        }
+        .btn:hover {
+            background-color: #0099cc;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="calc">
+               <form name="calculator">
+                    <input placeholder="input number" type="text" name="first">
+                    <select name="operator">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                        <option value="%">%</option>
+                    </select>
+                    <input placeholder="input number" type="text" name="second">
+                   <button class="btn">Try me!</button>
+                </form>
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+            setTimeout(function() { alert('’Please, use me...') }, 30000);
+            var btn = document.querySelector('.btn');
+            btn.addEventListener('click', validation);
+
+            function validation () {
+                var calc = document.forms.calculator;
+                var first = calc.elements.first.value;
+                var second = calc.elements.second.value;
+                var operator = calc.elements.operator.value;
+                if (isFinite(first) == false || isFinite(second) == false || first == "" || second == "" || first < 0 || second < 0)
+                    alert('Error :(');
+                else
+                {
+                    var a = parseInt(first);
+                    var b = parseInt(second);
+                    switch(operator) {
+                        case '+': alert(a + b); console.log(a + b); break;
+                        case '-': alert(a - b); console.log(a - b); break;
+                        case '*': alert(a * b); console.log(a * b); break;
+                        case '/':
+                            if (b == 0){
+                                console.log('It’s over 9000!');
+                                alert('It’s over 9000!');
+                            }
+                            else {
+                                alert(a / b);
+                                console.log(a / b); 
+                            }
+                            break;
+                        case '%': 
+                            if (b == 0) {
+                                alert('It’s over 9000!');
+                                console.log('It’s over 9000!');
+                            }
+                            else {
+                                alert(a % b);
+                                console.log(a % b); 
+                            }
+                            break;
+                    }
+                }
+            }
+        </script>
+        
+    </body>
+</html>

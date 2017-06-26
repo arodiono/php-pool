@@ -1,0 +1,28 @@
+body {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+}
+table {
+    width: 100%;
+}
+th {
+    height: 30px;
+}
+.message {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    min-height: 20px;
+    box-sizing: border-box;
+    padding: 10px 15px;
+}
+.login {
+    font-size: 13px;
+    font-style: normal;
+    padding-left: 10px;
+    width: 20%;
+}
+.message {
+    width: 80%;
+}

@@ -1,0 +1,71 @@
+html {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	font-family: Courier, monospace;
+	font-size: 1rem;
+	background-color: #FFF0A5;
+	background-image: url(https://www.obzor.lt/images/news/6/2013_07_18/pic7.jpg);
+	background-size: cover;
+	background-blend-mode: overlay;
+}
+h1 {
+	font-size: 2.3vw;
+}
+p {
+	margin: 0;
+	padding: 0;
+}
+.container {
+	margin-right: auto;
+	margin-left: auto;
+	width: 80vw;
+}
+.row {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	display: flex;
+}
+.cell {
+	padding: 0;
+	margin: 0.04vw;
+	width: 4.3vw;
+}
+.cell:hover {
+	opacity: 0.85;
+}
+.cell-red {
+	background-color: #B64926;
+}
+.cell-green {
+	background-color: #468966;
+}
+.cell-blue {
+	background-color: #5CBEE4;
+}
+.cell-yellow {
+	background-color: #FFB03B;
+}
+.number {
+	display: block;
+	position: relative;
+	margin-right: 0;
+	font-size: 0.8vw;
+}
+.name {
+	padding: 0.25vw;
+	text-align: center;
+	font-size: 2.2vw;
+	font-weight: bold;
+}
+.weight {
+	text-align: right;
+	font-size: 0.8vw;
+}
+.title {
+	margin-bottom: -4vw;
+	text-align: center;
+	padding-top: -1vw;
+}

@@ -1,0 +1,14 @@
+<- Vertex ----------------------------------------------------------------------
+The Vertex class handles coordinates and color.
+
+An instance can be contructed from 'x', 'y', and 'z' coordinates.
+Sometimes also contained are 'w' (homogeneous coordinates) which represents the length (default = 1.00),
+and 'color' which represented by an instance of the Color Class (default = white).
+
+Example:
+
+**construct color Check Color.doc.php
+$red   = new Color( array( 'red' => 255, 'green' =>   0, 'blue' =>   0 ) );
+
+new Vertex( array( 'x' => 0.0, 'y' => 1.0, 'z' => 0.0, 'color' => $red   ) );
+---------------------------------------------------------------------- Vertex ->
